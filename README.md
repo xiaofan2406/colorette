@@ -1,0 +1,4 @@
+# colorette
+
+Generate colour palette
+
