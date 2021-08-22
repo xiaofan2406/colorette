@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Color from 'color';
 import ColorBlock from './ColorBlock';
-import classes from './palette.module.css';
+import classes from './Palette.module.css';
 
 const defaultColor = '#212121';
 const defaultCount = 9;
@@ -56,7 +56,7 @@ function Palette() {
             onChangeScale={(newScale) => {
               setScales((prev) => {
                 const copy = [...prev];
-                prev[index] = +newScale.toFixed(2);
+                copy[index] = +newScale.toFixed(2);
                 return copy;
               });
             }}
