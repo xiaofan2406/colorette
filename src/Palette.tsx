@@ -78,7 +78,10 @@ function Palette() {
         <button
           onClick={() => {
             window.navigator.clipboard.writeText(
-              palette.map((entry) => entry.color).join(',')
+              [...palette]
+                .reverse()
+                .map((entry) => `'${entry.color}'`)
+                .join(',')
             );
           }}
         >
@@ -87,9 +90,10 @@ function Palette() {
         <button
           onClick={() => {
             window.navigator.clipboard.writeText(
-              palette
-                .map((entry, index) => `--color-${index}: ${entry.color}`)
-                .join(';')
+              [...palette]
+                .reverse()
+                .map((entry, index) => `--color-${index + 1}: ${entry.color};`)
+                .join('\n')
             );
           }}
         >
