@@ -1,0 +1,35 @@
+.palette {
+  width: 600px;
+}
+
+.new-color-form {
+  width: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px;
+  height: 60px;
+}
+
+.new-color-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 360px;
+  padding: 12px;
+  border: 1px solid #e8e8e8;
+}
+
+.controls {
+  margin-top: 12px;
+  font-size: 12px;
+  display: flex;
+  width: 360px;
+  justify-content: space-around;
+
+  & > button {
+    padding: 6px 12px;
+    border: 1px solid #e8e8e8;
+  }
+}
